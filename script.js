@@ -4,4 +4,6 @@
  * The value 10 is an example
  */
 var price = 10;
-$.post('cart/change.js', {line: 1, properties: {_shipping_price: price}});
+var productQuantity = 1; // update with the appropiate quantity
+var lineNumber = 1; // line numbers are 1-based
+$.post('cart/change.js', {line: lineNumber, properties: {_shipping_price: price}, quantity: productQuantity});
